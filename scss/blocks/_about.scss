@@ -1,0 +1,35 @@
+.about {
+    position: relative;
+    & ::before {
+        position: absolute;
+        z-index: -1;
+        content:'';
+        top: 0px;
+        left: 0px;
+        width: 550px;
+        height: 424px;
+        background-image: url(./../../assets/img/about/figure.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+
+    &-content {
+        max-width: 380px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &-descr {
+            font-size: 20px;
+            font-weight: 700;
+
+            &--line {
+                display: inline;
+                width: 30px;
+                height: 2px;
+                background: var(--text-color-light);
+            }
+        }
+    }
+}

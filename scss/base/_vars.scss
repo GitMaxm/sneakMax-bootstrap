@@ -1,0 +1,22 @@
+:root {
+	--container-width: 1210px;
+	--container-padding: 15px;
+
+	--font-family: "Intro Book", sans-serif;
+	--second-family: "Intro Regular", sans-serif;
+	--third-family: "Intro Bold", sans-serif;
+
+	--bg: #484283;
+	--accent: #f14f4f;
+	--text-color-light: #fff;
+	--text-color-main: #444b58;
+	--small-text: #dbbba9;
+	--sec-bg: #fff4ee;
+	--gray: #b2b5bb;
+    --border-radius-filter: 4px;
+}
+
+.dark {
+	--page-bg: #252526;
+	--text-color: #fff;
+}

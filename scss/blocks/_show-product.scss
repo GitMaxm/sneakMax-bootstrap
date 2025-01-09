@@ -1,0 +1,104 @@
+// .show-product-background {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background-color: rgba(68, 75, 88, 0.7);
+//     z-index: 999;
+// }
+.show-product {
+    --bs-modal-width: 60% !important;
+
+    @media (max-width: 1470px) {
+        --bs-modal-width: 80% !important;
+    }
+}
+.show-product-modal {
+    // position: absolute;
+    // left: 50%;
+    // top: 50%;
+    // transform: translate(-50%, -50%);
+    // gap: 20px;
+    // flex-direction: row !important;
+    // justify-content: space-around;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    &-header {
+        .btn-close {
+            position: absolute;
+            right: 1%;
+        }
+    }
+    &-bottom {
+        // display: flex;
+        // flex-direction: row !important;
+        // justify-content: space-around;
+        // gap: 20px;
+
+        div {
+            // max-width: 560px;
+        }
+    }
+
+    @media (max-width: 930px) {
+        .catalog-product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+.show-product-title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+
+    .show-product-details {
+        color: var(--gray);
+        span {
+            color: var(--text-color-main);
+        }
+    }
+
+    h3 {
+        font-weight: 400;
+
+        line-height: 1.4;
+    }
+
+    .show-product-size {
+        &-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        &-button {
+            border: 1px solid var(--gray);
+            border-radius: 4px;
+            padding: 5px 20px;
+        }
+    }
+    .show-product-price {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        p {
+            margin: 0;
+        }
+        &-main {
+            font-family: var(--third-family);
+            font-weight: 700;
+            font-size: 30px;
+            color: var(--text-color-main);
+        }
+        &-old {
+            color: var(--gray);
+        }
+    }
+}

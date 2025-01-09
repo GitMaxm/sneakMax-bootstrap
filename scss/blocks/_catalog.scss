@@ -1,0 +1,265 @@
+//---------------------- Фильтр ------------------------//
+
+.catalog-filter-content {
+    background: var(--sec-bg);
+}
+
+.filter {
+    &-parameter {
+        font-weight: 700;
+    }
+}
+.filter-price {
+    $track-height: 4px;
+    $thumb-width: 3px; // Ширина ползунка
+    $thumb-height: 15px; // Высота ползунка
+
+    &-inputs {
+        border-top-left-radius: var(--border-radius-filter); /* Закругление верхнего левого угла */
+        border-top-right-radius: var(--border-radius-filter); /* Закругление верхнего правого угла */
+        border: 1px solid var(--small-text);
+        border-bottom: none;
+
+        .filter-price-input {
+            border-bottom: none;
+            padding: 8px;
+
+            &:not(:last-child) {
+                border-right: 1px solid var(--small-text); // Линия между полями
+            }
+        }
+    }
+
+    &-slider {
+        position: relative;
+        height: $track-height;
+        margin-top: -10px;
+
+        .filter-price-progress {
+            position: absolute;
+            height: $track-height;
+            background: var(--text-color-main);
+            left: 0;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .filter-price-progress--bg {
+            position: absolute;
+            height: 1px;
+            background: var(--text-color-main);
+            left: 0;
+            right: 0;
+            top: 50%;
+            z-index: 2;
+            width: 100%;
+        }
+    }
+
+    &-range {
+        position: absolute;
+        width: 100%;
+        height: $track-height;
+        background: none;
+        pointer-events: none;
+        -webkit-appearance: none;
+        z-index: 6;
+        bottom: 6px;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        border-radius: 20px;
+
+        // Стили для Chrome/Safari/Edge
+        &::-webkit-slider-thumb {
+            height: $thumb-height;
+            width: $thumb-width;
+            border-radius: 50px;
+            border: none;
+            background: var(--text-color-main);
+            pointer-events: auto;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+
+        // Стили для Firefox
+        &::-moz-range-thumb {
+            height: $thumb-height;
+            width: $thumb-width;
+            border-radius: 50px;
+            border: none;
+            background: var(--text-color-main);
+            pointer-events: auto;
+            -moz-appearance: none;
+            cursor: pointer;
+        }
+
+        // Убираем стандартный трек
+        &::-webkit-slider-runnable-track {
+            height: $track-height;
+            background: none;
+        }
+
+        &::-moz-range-track {
+            height: $track-height;
+            background: none;
+        }
+    }
+}
+
+.filter-gender {
+    .gender-check {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .gender-check-input {
+        display: none;
+
+        &:checked + .gender-check-label::after {
+            opacity: 1;
+        }
+    }
+
+    .gender-check-label {
+        position: relative;
+        padding-left: 30px;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            border: 1px solid var(--small-text);
+            border-radius: 4px;
+            background-color: transparent;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 12px;
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="15" height="12" fill="none" viewBox="0 0 15 12"%3E%3Cpath d="M5.625 11.186a.813.813 0 0 1-1.155 0L.33 6.951a.813.813 0 0 1 0-1.154L.86 4.83a.813.813 0 0 1 1.155 0l2.644 2.643L12.238.33a.813.813 0 0 1 1.155 0l.53.53a.813.813 0 0 1 0 1.156l-8.294 8.17Z" fill="%23DBBBA9"/%3E%3C/svg%3E');
+            background-size: contain;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+    }
+}
+
+.filter-size {
+    &-btns {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // Максимум 3 кнопки в ряду
+    }
+
+    &-input {
+        display: none; // Скрываем стандартные чекбоксы
+    }
+
+    &-label {
+        display: inline-block;
+        text-align: center;
+        padding: 8px 0;
+        border: 1px solid var(--small-text);
+        transition:
+            background-color 0.3s,
+            color 0.3s;
+
+        // Убираем внутренние отступы между кнопками
+        margin-right: -1px;
+        margin-bottom: -1px;
+
+        &:hover {
+            background-color: var(--small-text);
+        }
+    }
+
+    // Стили для выбранных кнопок
+    &-input:checked + .filter-size-label {
+        background-color: var(--small-text);
+        border-color: #fff;
+    }
+}
+
+.filter-buttons {
+    &-apply {
+        color: var(--text-color-light);
+        background: var(--text-color-main);
+    }
+}
+
+//================================ Фильтр =========================//
+
+.product-descr {
+    margin-bottom: 5px;
+}
+.product-price {
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+@media (max-width: 630px) {
+    .catalog-product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+// Наведение на продукт
+.catalog-product-hover {
+    position: relative;
+    overflow: hidden; // Для предотвращения выхода фона и кнопок за границы
+
+    &:hover::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.6);
+        z-index: 1; // Чтобы фон оказался позади кнопок
+    }
+
+    .product-buttons {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none; // Кнопки по умолчанию скрыты
+        z-index: 2; // Кнопки поверх фона
+        gap: 10px;
+
+        button {
+            background: var(--text-color-main);
+            border: none;
+            width: clamp(40px, 10vw, 80px); // Минимум 60px, зависит от ширины экрана, максимум 100px
+            height: clamp(40px, 10vw, 80px);
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &:hover .product-buttons {
+        display: flex; // Показывать кнопки при наведении
+    }
+}

@@ -1,0 +1,53 @@
+[
+  {
+    "id": "1",
+    "title": "Кроссовки Nike Air Force",
+    "img": "01.png",
+    "priceMain": 11000,
+    "priceOld": 22000,
+    "article": 879876,
+    "size": [36, 37, 38],
+    "description": "Кроссовки Nike Air Force '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы.",
+    "characteristics": {
+      "gender": "Мужской",
+      "color": "Разноцветный",
+      "сomposition": "Кожа, текстиль, резина",
+      "сountry": "Вьетнам"
+    },
+    "quantity": 10
+  },
+  {
+    "id": "2",
+    "title": "Кроссовки Nike Air Force",
+    "img": "01.png",
+    "priceMain": 11000,
+    "priceOld": 22000,
+    "article": 879876,
+    "size": [36, 37, 38],
+    "description": "Кроссовки Nike Air Force '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы.",
+    "characteristics": {
+      "gender": "Мужской",
+      "color": "Разноцветный",
+      "сomposition": "Кожа, текстиль, резина",
+      "сountry": "Вьетнам"
+    },
+    "quantity": 10
+  },
+  {
+    "id": "3",
+    "title": "Кроссовки Nike Air Force",
+    "img": "01.png",
+    "priceMain": 11000,
+    "priceOld": 22000,
+    "article": 879876,
+    "size": [36, 37, 38],
+    "description": "Кроссовки Nike Air Force '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы.",
+    "characteristics": {
+      "gender": "Мужской",
+      "color": "Разноцветный",
+      "сomposition": "Кожа, текстиль, резина",
+      "сountry": "Вьетнам"
+    },
+    "quantity": 10
+  }
+]

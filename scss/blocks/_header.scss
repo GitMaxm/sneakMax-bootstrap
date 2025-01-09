@@ -1,0 +1,47 @@
+.logo {
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: clamp(1.563rem, 1.449rem + 0.57vw, 1.875rem); //30-25
+    color: var(--text-color-light);
+}
+
+.nav-link__icon {
+    width: 20px;
+    height: 18px;
+    background-image: url("./../assets/img/header/cart.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.header-bottom {
+    padding: 100px 0;
+    position: relative;
+
+    ::before {
+        content: "SneakMax";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: var(--third-family);
+        font-weight: 700;
+        font-size: clamp(2.5rem, -1.136rem + 18.18vw, 12.5rem); //200-40
+        color: rgba(255, 255, 255, 0.02);
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: -10; /* Убедитесь, что основной контент выше этого слоя */
+        
+        @media (max-width: 630px) {
+            display: none;
+        }
+    }
+
+    &-content {
+        max-width: 580px;
+    }
+    
+    .button:hover {
+        opacity: 0.8;
+        background: var(--accent) !important;
+    }
+}
